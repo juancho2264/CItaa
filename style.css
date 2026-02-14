@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff0f6;
+  font-family: "Protest Riot", sans-serif;
+  overflow: hidden; /* IMPORTANTE: Para que no salgan barras de scroll cuando el botón sea gigante */
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.cat-img {
+  width: 90%;
+  max-width: 350px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.text-box {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.8rem;
+  color: #f53699;
+  line-height: 1.3;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.btn {
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Crecimiento suave */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.btn--yes {
+  background-color: #40c057;
+  /* El z-index 9999 asegura que tape TODO cuando sea gigante */
+  z-index: 9999; 
+  position: relative;
+}
+
+.btn--no {
+  background-color: #f03e3e;
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .title { font-size: 4rem; }
+  .btn { font-size: 2.4rem; padding: 2rem 4rem; }
+}
