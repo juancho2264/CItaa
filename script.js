@@ -38,7 +38,7 @@ noButton.addEventListener("click", function () {
 });
 
 function handleYesClick() {
-  titleElement.innerHTML = "¡Siiuuu! Prometo que esta vez sale de 10 ❤️";
+  titleElement.innerHTML = "¡Sii! Prometo que esta sale de 10 ❤️";
   buttonsContainer.classList.add("hidden");
   catImg.src = finalImage;
 }
